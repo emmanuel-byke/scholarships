@@ -76,18 +76,18 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16 md:pt-28 md:pb-24">
+    <section className="relative overflow-hidden bg-linear-to-r from-bg to-transparent pt-20 pb-16 md:pt-28 md:pb-24">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-gradient-to-r from-indigo-200 to-pink-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-40 right-1/4 w-60 h-60 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-linear-to-r from-blue-200 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-linear-to-r from-indigo-200 to-pink-200 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-40 right-1/4 w-60 h-60 bg-linear-to-r from-cyan-200 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Notification Banner */}
         {showNotification && (
-          <div className="mb-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl p-4 shadow-lg transition-all duration-300 animate-slide-down">
+          <div className="mb-8 bg-linear-to-r from-blue-600 to-blue-700 text-white rounded-xl p-4 shadow-lg transition-all duration-300 animate-slide-down">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white/20 rounded-lg">
@@ -117,7 +117,7 @@ export const Hero = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-8 animate-fade-in">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 font-semibold mb-6 animate-pulse-slow">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-blue-100 to-purple-100 text-blue-700 font-semibold mb-6 animate-pulse-slow">
                 <TrendingUp className="h-4 w-4" />
                 <span>Trusted by 50,000+ Students Worldwide</span>
               </div>
@@ -125,10 +125,10 @@ export const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="block text-gray-900">Find Your Perfect</span>
                 <span className="relative inline-block mt-2">
-                  <span className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <span className="relative z-10 bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Master's Program
                   </span>
-                  <div className="absolute bottom-2 left-0 w-0 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full animate-expand-width animation-delay-500"></div>
+                  <div className="absolute bottom-2 left-0 w-0 h-3 bg-linear-to-r from-blue-200 to-purple-200 rounded-full animate-expand-width animation-delay-500"></div>
                 </span>
               </h1>
 
@@ -151,7 +151,7 @@ export const Hero = () => {
                   onFocus={() => setIsSearchFocused(true)}
                   onBlur={() => setIsSearchFocused(false)}
                 />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-xl group">
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-3 bg-linear-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-xl group">
                   Search
                   <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -195,12 +195,12 @@ export const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
+              <button className="group px-8 py-3.5 bg-linear-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
                 <span>Explore Programs</span>
                 <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="group px-8 py-3.5 bg-white text-gray-800 font-semibold border-2 border-gray-200 rounded-xl hover:border-blue-400 hover:text-blue-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3">
-                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                <div className="w-2 h-2 bg-linear-to-r from-blue-500 to-purple-500 rounded-full group-hover:scale-125 transition-transform"></div>
                 <span>Book Free Consultation</span>
               </button>
             </div>
@@ -210,11 +210,11 @@ export const Hero = () => {
           <div className="relative">
             {/* Main Card */}
             <div className="relative max-w-lg mx-auto">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-3xl blur-xl opacity-20"></div>
+              <div className="absolute -inset-4 bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 rounded-3xl blur-xl opacity-20"></div>
               
               <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-gray-100 animate-float-slow">
                 {/* Header */}
-                <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="p-6 bg-linear-to-r from-blue-600 to-purple-600 text-white">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
@@ -236,7 +236,7 @@ export const Hero = () => {
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-1/3"></div>
+                        <div className="h-full bg-linear-to-r from-blue-500 to-purple-500 w-1/3"></div>
                       </div>
                       <span className="text-sm text-gray-500">1 of 3</span>
                     </div>
@@ -248,7 +248,7 @@ export const Hero = () => {
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-4">
                             <div className="p-3 bg-white rounded-xl shadow-sm">
-                              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                              <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
                                 <span className="text-white font-bold text-lg">MS</span>
                               </div>
                             </div>
@@ -274,7 +274,7 @@ export const Hero = () => {
                           </div>
                         </div>
                         <div className="flex gap-2 mt-4">
-                          <button className="flex-1 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-sm">
+                          <button className="flex-1 py-2 bg-linear-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-sm">
                             View Details
                           </button>
                           <button className="px-4 py-2 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors text-sm">
@@ -292,7 +292,7 @@ export const Hero = () => {
                         key={index}
                         className={`p-4 rounded-xl transition-all duration-500 cursor-pointer hover:shadow-md ${
                           index === currentStat 
-                            ? 'bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100 transform scale-105' 
+                            ? 'bg-linear-to-br from-blue-50 to-purple-50 border border-blue-100 transform scale-105' 
                             : 'bg-gray-50 hover:bg-white'
                         }`}
                         onClick={() => setCurrentStat(index)}
@@ -300,7 +300,7 @@ export const Hero = () => {
                         <div className="flex items-center gap-2 mb-2">
                           <div className={`p-1.5 rounded-lg transition-colors ${
                             index === currentStat 
-                              ? 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600' 
+                              ? 'bg-linear-to-r from-blue-100 to-purple-100 text-blue-600' 
                               : 'bg-gray-100 text-gray-600'
                           }`}>
                             {stat.icon}
@@ -320,7 +320,7 @@ export const Hero = () => {
                         onClick={() => setCurrentStat(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
                           index === currentStat 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-500 w-6' 
+                            ? 'bg-linear-to-r from-blue-500 to-purple-500 w-6' 
                             : 'bg-gray-300 hover:bg-gray-400'
                         }`}
                       />
@@ -331,7 +331,7 @@ export const Hero = () => {
                 {/* Floating Notification 1 */}
                 <div className="absolute -top-6 left-10 bg-white p-4 rounded-xl shadow-2xl border border-gray-100 animate-bounce-slow">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-lg">
+                    <div className="p-2 bg-linear-to-r from-green-100 to-emerald-100 rounded-lg">
                       <CheckCircle className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
@@ -344,7 +344,7 @@ export const Hero = () => {
                 {/* Floating Notification 2 */}
                 <div className="absolute -bottom-6 right-10 bg-white p-4 rounded-xl shadow-2xl border border-gray-100 animate-bounce-slower animation-delay-1000">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-r from-orange-100 to-amber-100 rounded-lg">
+                    <div className="p-2 bg-linear-to-r from-orange-100 to-amber-100 rounded-lg">
                       <Star className="h-6 w-6 text-orange-600" />
                     </div>
                     <div>
