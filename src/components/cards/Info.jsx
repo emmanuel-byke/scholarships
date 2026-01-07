@@ -1,16 +1,20 @@
 import { MapPin, Timer, Clock, ChevronRight } from "lucide-react";
 
-export const Info = ({ title, badge, desc, time, place, start_time, onClick }) => {
+export const Info = ({ title, badge, desc, time, place, start_time, url }) => {
+  const handleClick = () => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+  
   return (
     <div
       className="group relative bg-bg rounded-tr-4xl border border-border overflow-hidden shadow-xs hover:shadow-md 
         hover:border-accent transition-all duration-500 cursor-pointer shadow-muted
-        focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-      onClick={onClick}
+        focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 w-sm"
+      onClick={handleClick}
       role="button"
       tabIndex={0}
       aria-label={`Event: ${title}. Click for details.`}
-      onKeyDown={(e) => e.key === 'Enter' && onClick?.()}
+      onKeyDown={(e) => e.key === 'Enter' && handleClick()}
     >
       {/* Accent bar */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-accent to-transparent group-hover:to-accent 
@@ -44,7 +48,7 @@ export const Info = ({ title, badge, desc, time, place, start_time, onClick }) =
           <DetailItem 
             icon={<Clock className="w-4 h-4" />}
             text={time}
-            subtext="Duration"
+            subtext="Application Period"
           />
           <DetailItem 
             icon={<MapPin className="w-4 h-4" />}
@@ -54,7 +58,7 @@ export const Info = ({ title, badge, desc, time, place, start_time, onClick }) =
           <DetailItem 
             icon={<Timer className="w-4 h-4" />}
             text={start_time}
-            subtext="Starts at"
+            subtext="Classes starts at"
           />
         </div>
       </div>
